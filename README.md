@@ -30,14 +30,6 @@ git clone https://github.com/wx971025/dsh-openspec.git
 cd dsh-openspec
 ```
 
-仓库已包含构建产物 `lib/`。若你改过源码，先构建：
-
-```sh
-npm install
-npm test
-npm run build
-```
-
 再用本仓库的绝对路径装进 web profile：
 
 ```sh
@@ -87,7 +79,3 @@ dsh plugin --profile web remove dsh-openspec
 ```
 
 卸载后按钮和 `/openspec-viewer` 接口会消失。磁盘上的 `openspec/` 文件不会被删。
-
-## 注意
-
-文件读写走 Harness Host 进程权限，且与 Web UI 同源、无额外登录。默认只监听 `127.0.0.1`。不要把 Host 绑到 `0.0.0.0` 或暴露到公网。
