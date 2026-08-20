@@ -33,7 +33,11 @@
   ],
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test --experimental-strip-types test/*.test.ts"
+    "test": "node --test --experimental-strip-types test/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
   },
   "dsh": {
     "bundle": {
