@@ -4,6 +4,19 @@
   "type": "module",
   "description": "DeepSeek Harness plugin that browses, previews, edits, and saves OpenSpec change Markdown files in the Web UI.",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wx971025/dsh-openspec.git"
+  },
+  "bugs": {
+    "url": "https://github.com/wx971025/dsh-openspec/issues"
+  },
+  "homepage": "https://github.com/wx971025/dsh-openspec#readme",
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "openspec"
+  ],
   "main": "./lib/index.js",
   "exports": {
     ".": "./lib/index.js",
