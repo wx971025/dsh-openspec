@@ -17,3 +17,10 @@ test('viewer styles use Harness theme aliases instead of hardcoded palette', () 
   }
   assert.doesNotMatch(OPENSPEC_STYLES, /#[0-9a-fA-F]{3,8}/)
 })
+
+test('file path sits below the toolbar instead of sharing the button row', () => {
+  assert.match(OPENSPEC_STYLES, /\.dsh-openspec-chrome \{[\s\S]*flex-direction: column/)
+  assert.match(OPENSPEC_STYLES, /\.dsh-openspec-path \{[\s\S]*display: block/)
+  assert.match(OPENSPEC_STYLES, /\.dsh-openspec-path \{[\s\S]*text-align: left/)
+  assert.doesNotMatch(OPENSPEC_STYLES, /\.dsh-openspec-path \{[\s\S]*margin-left: auto/)
+})
