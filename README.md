@@ -43,13 +43,13 @@ dsh plugin --profile web add /absolute/path/to/dsh-openspec
 不克隆到本地，直接让 profile 从 GitHub 拉取：
 
 ```sh
-dsh plugin --profile web add github:wx971025/dsh-openspec
+dsh plugin --profile web add github:wx971025/dsh-openspec#v0.1.0
 ```
 
 等价写法：
 
 ```sh
-dsh plugin --profile web add git+https://github.com/wx971025/dsh-openspec.git
+dsh plugin --profile web add git+https://github.com/wx971025/dsh-openspec.git#v0.1.0
 ```
 
 pnpm 10 可能要求允许该包的构建脚本。若安装时提示 blocked，按终端说明把对应 key 写入 profile 的 `pnpm-workspace.yaml` 的 `allowBuilds`，再执行一次上面的 `dsh plugin add`。
