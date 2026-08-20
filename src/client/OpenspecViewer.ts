@@ -221,27 +221,31 @@ export function OpenspecViewer({ projectRoot, projectReady = true }: OpenspecVie
       { className: 'dsh-openspec-main' },
       createElement(
         'header',
-        { className: 'dsh-openspec-toolbar' },
-        createElement('button', {
-          type: 'button',
-          className: `dsh-openspec-chip${state.mode === 'preview' ? ' is-active' : ''}`,
-          onClick: () => dispatch({ type: 'set-mode', mode: 'preview' }),
-        }, '预览'),
-        createElement('button', {
-          type: 'button',
-          className: `dsh-openspec-chip${state.mode === 'edit' ? ' is-active' : ''}`,
-          onClick: () => dispatch({ type: 'set-mode', mode: 'edit' }),
-          disabled: !state.selected,
-        }, '编辑'),
-        createElement('button', {
-          type: 'button',
-          className: 'dsh-openspec-save',
-          onClick: () => { void save() },
-          disabled: !state.selected || !dirty || state.saving,
-        }, state.saving ? '保存中…' : '保存'),
-        view.saved ? createElement('span', { className: 'dsh-openspec-status-ok' }, '已保存') : null,
-        state.saveError ? createElement('span', { role: 'alert', className: 'dsh-openspec-status-err' }, state.saveError) : null,
-        state.selected ? createElement('span', { className: 'dsh-openspec-path' }, state.selected) : null,
+        { className: 'dsh-openspec-chrome' },
+        createElement(
+          'div',
+          { className: 'dsh-openspec-toolbar' },
+          createElement('button', {
+            type: 'button',
+            className: `dsh-openspec-chip${state.mode === 'preview' ? ' is-active' : ''}`,
+            onClick: () => dispatch({ type: 'set-mode', mode: 'preview' }),
+          }, '预览'),
+          createElement('button', {
+            type: 'button',
+            className: `dsh-openspec-chip${state.mode === 'edit' ? ' is-active' : ''}`,
+            onClick: () => dispatch({ type: 'set-mode', mode: 'edit' }),
+            disabled: !state.selected,
+          }, '编辑'),
+          createElement('button', {
+            type: 'button',
+            className: 'dsh-openspec-save',
+            onClick: () => { void save() },
+            disabled: !state.selected || !dirty || state.saving,
+          }, state.saving ? '保存中…' : '保存'),
+          view.saved ? createElement('span', { className: 'dsh-openspec-status-ok' }, '已保存') : null,
+          state.saveError ? createElement('span', { role: 'alert', className: 'dsh-openspec-status-err' }, state.saveError) : null,
+        ),
+        state.selected ? createElement('div', { className: 'dsh-openspec-path' }, state.selected) : null,
       ),
       createElement(
         'div',

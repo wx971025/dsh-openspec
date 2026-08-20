@@ -138,21 +138,31 @@ export const OPENSPEC_STYLES = `
   flex-direction: column;
   background: var(--dsw-alias-bg-layer-1);
 }
+.dsh-openspec-chrome {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  border-bottom: 1px solid var(--dsw-alias-border-l2);
+  background: var(--dsw-alias-bg-layer-2);
+}
 .dsh-openspec-toolbar {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 12px;
-  border-bottom: 1px solid var(--dsw-alias-border-l2);
-  background: var(--dsw-alias-bg-layer-2);
+  padding: 8px 12px 6px;
 }
 .dsh-openspec-path {
-  margin-left: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0;
+  padding: 0 12px 8px;
   color: var(--dsw-alias-label-caption);
   font-size: 12px;
+  line-height: 1.45;
+  text-align: left;
+  overflow-wrap: anywhere;
+  word-break: break-all;
 }
 .dsh-openspec-chip {
   height: 28px;
