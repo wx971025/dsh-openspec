@@ -1,5 +1,7 @@
 # dsh-openspec
 
+[![Awesome DSH Plugin](https://awesome-dsh-plugin.com/badge.svg)](https://awesome-dsh-plugin.com)
+
 DeepSeek Harness Web UI 插件：在会话标题栏打开当前项目的 `openspec/` 目录，浏览、预览、编辑并保存其中的文件。
 
 ## 它做什么
